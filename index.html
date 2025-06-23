@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Income Secrets - Learn the Strategies That Made Me Over $300/Day</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'comic': ['Comic Neue', 'cursive'],
+                        'fredoka': ['Fredoka', 'sans-serif'],
+                    },
+                    animation: {
+                        'shimmer': 'shimmer 2s ease-in-out infinite',
+                        'float': 'float 3s ease-in-out infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'slide-in': 'slideIn 0.5s ease-out',
+                    },
+                    keyframes: {
+                        shimmer: {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' },
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateX(100%)' },
+                            '100%': { transform: 'translateX(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .rainbow-shimmer {
+            background: linear-gradient(
+                90deg,
+                #ff6b9d,
+                #c44569,
+                #feca57,
+                #48dbfb,
+                #0abde3,
+                #ff9ff3,
+                #ff6b9d
+            );
+            background-size: 200% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 2s ease-in-out infinite;
+        }
+        
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        .blob {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+
+        .blob-2 {
+            border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        }
+
+        .blob-3 {
+            border-radius: 50% 60% 40% 70% / 40% 50% 60% 50%;
+        }
+
+        .sticker {
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .floating-emoji {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .floating-emoji:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .floating-emoji:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .fun-hover {
+            transition: all 0.3s ease;
+        }
+
+        .fun-hover:hover {
+            transform: scale(1.05) rotate(2deg);
+            filter: brightness(1.1);
+        }
+
+        .wavy-bg {
+            background: linear-gradient(45deg, #ff9a9e, #fecfef, #fecfef, #fecfef);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .horizontal-scroll {
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+        }
+
+        .horizontal-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scroll-snap {
+            scroll-snap-type: x mandatory;
+        }
+
+        .scroll-snap > * {
+            scroll-snap-align: start;
+        }
+
+        .sticky-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sticky-banner.show {
+            transform: translateY(0);
+        }
+
+        .quiz-option {
+            transition: all 0.3s ease;
+        }
+
+        .quiz-option:hover {
+            transform: scale(1.1);
+        }
+
+        .quiz-option.selected {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 107, 157, 0.5);
+        }
+    </style>
+</head>
+<body class="font-comic bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50">
+    <!-- Floating Emojis -->
+    <div class="fixed top-20 left-10 text-4xl floating-emoji z-10">🚀</div>
+    <div class="fixed top-40 right-20 text-3xl floating-emoji z-10">💫</div>
+    <div class="fixed bottom-40 left-20 text-2xl floating-emoji z-10">✨</div>
+    <div class="fixed bottom-20 right-10 text-3xl floating-emoji z-10">🔥</div>
+
+    <!-- Hero Section - Split into smaller blocks -->
+    <section class="relative overflow-hidden py-12 lg:py-16">
+        <!-- Background Blobs -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-gradient-to-r from-pink-300 to-purple-300 blob opacity-20 animate-float"></div>
+        <div class="absolute top-20 right-0 w-80 h-80 bg-gradient-to-r from-blue-300 to-cyan-300 blob-2 opacity-20 animate-float" style="animation-delay: 1s;"></div>
+        
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <!-- Author Badge -->
+            <div class="text-center mb-8">
+                <div class="inline-flex items-center bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 mb-4 sticker">
+                    <span class="text-3xl mr-3">👨‍💻</span>
+                    <h3 class="text-xl lg:text-2xl font-bold text-gray-800">Sophie Blake</h3>
+                </div>
+            </div>
+
+            <!-- Main Headline -->
+            <div class="text-center mb-12">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-gray-800">
+                    Learn the AI Strategies That Made Me Over 
+                    <span class="rainbow-shimmer">$300/Day</span> — No Experience Needed! 🎯
+                </h1>
+            </div>
+
+            <!-- Description -->
+            <div class="text-center mb-12 max-w-4xl mx-auto">
+                <p class="text-lg sm:text-xl md:text-2xl text-gray-700 font-medium">
+                    Imagine turning your creative ideas into viral videos that skyrocket your profile, attract loyal followers, and even generate real income! 🚀 With this guide, you'll learn the exact steps I used to achieve massive success—and you can too! ✨
+                </p>
+            </div>
+
+            <!-- Video Section -->
+            <div class="flex justify-center mb-12">
+                <div class="w-full max-w-2xl relative">
+                    <div class="absolute -top-6 -right-6 text-5xl animate-bounce-slow">🎬</div>
+                    <video controls class="w-full h-auto rounded-3xl shadow-2xl fun-hover">
+                        <source src="sophie blake_promo.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="text-center mb-8">
+                <a href="https://learn.xavvi.com/?code=4TIR8BM4" class="inline-block bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 hover:from-pink-500 hover:via-purple-500 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-full text-xl transition-all duration-300 transform hover:scale-110 shadow-xl fun-hover sticker">
+                    <div class="text-center">
+                        <div class="mb-2">🎉 Start Earning With AI Today! 🎉</div>
+                        <div class="text-base font-semibold bg-white/20 rounded-full px-4 py-2">
+                            <span class="line-through text-red-200">$99</span>
+                            <span class="mx-2">•</span>
+                            <span class="text-yellow-200 font-bold text-lg">Now Only $4.99</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TikTok Videos Section - Horizontal Scroll -->
+    <section class="py-12 bg-white relative overflow-hidden">
+        <div class="absolute top-10 left-10 w-32 h-32 bg-gradient-to-r from-pink-200 to-purple-200 blob opacity-30 animate-float"></div>
+        <div class="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-r from-blue-200 to-cyan-200 blob-2 opacity-30 animate-float" style="animation-delay: 1s;"></div>
+        
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">See These Viral Videos in Action! 🌟</h2>
+                <p class="text-lg text-gray-600 font-medium">Scroll to see more amazing content! 👉</p>
+            </div>
+            
+            <!-- Horizontal Scrollable Videos -->
+            <div class="horizontal-scroll scroll-snap overflow-x-auto pb-4">
+                <div class="flex space-x-6" style="min-width: max-content;">
+                    <!-- Untitled Video 1 -->
+                    <div class="w-80 flex-shrink-0">
+                        <div class="aspect-[9/16] relative overflow-hidden rounded-3xl shadow-xl fun-hover">
+                            <div class="absolute top-3 left-3 text-2xl z-10">📱</div>
+                            <video autoplay muted loop class="w-full h-full object-cover">
+                                <source src="Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- Untitled Video 2 -->
+                    <div class="w-80 flex-shrink-0">
+                        <div class="aspect-[9/16] relative overflow-hidden rounded-3xl shadow-xl fun-hover">
+                            <div class="absolute top-3 left-3 text-2xl z-10">🎵</div>
+                            <video autoplay muted loop class="w-full h-full object-cover">
+                                <source src="Untitled video - Made with Clipchamp (2).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- Untitled Video 3 -->
+                    <div class="w-80 flex-shrink-0">
+                        <div class="aspect-[9/16] relative overflow-hidden rounded-3xl shadow-xl fun-hover">
+                            <div class="absolute top-3 left-3 text-2xl z-10">🔥</div>
+                            <video autoplay muted loop class="w-full h-full object-cover">
+                                <source src="Untitled video - Made with Clipchamp (3).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <!-- Untitled Video 4 -->
+                    <div class="w-80 flex-shrink-0">
+                        <div class="aspect-[9/16] relative overflow-hidden rounded-3xl shadow-xl fun-hover">
+                            <div class="absolute top-3 left-3 text-2xl z-10">💎</div>
+                            <video autoplay muted loop class="w-full h-full object-cover">
+                                <source src="Untitled video - Made with Clipchamp (4).mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Orange Cat Section -->
+    <section class="py-12 relative overflow-hidden">
+        <div class="absolute inset-0 wavy-bg opacity-30"></div>
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8 relative">
+                    <div class="absolute -top-6 -left-6 text-3xl animate-wiggle">🐱</div>
+                    <img src="orange_cat.png" alt="Orange Cat" class="w-full rounded-3xl shadow-xl h-auto object-cover fun-hover">
+                    <div class="absolute -bottom-4 -right-4 text-2xl animate-bounce-slow">😸</div>
+                </div>
+                <p class="text-lg lg:text-xl text-gray-700 font-bold bg-white/70 backdrop-blur-sm rounded-full px-6 py-3 inline-block sticker">
+                    Even this orange cat knows the secret to viral success! 🐱✨
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-gradient-to-r from-pink-100 via-purple-100 to-blue-100 relative overflow-hidden">
+        <div class="absolute top-0 right-0 text-6xl opacity-20 animate-float">📊</div>
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-8">
+                <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">The Results Speak for Themselves! 🎉</h3>
+                <p class="text-gray-600 text-lg font-medium">Over 500 students have created viral content using these exact AI strategies! 🚀</p>
+            </div>
+            
+            <!-- Horizontal Scrollable Stats -->
+            <div class="horizontal-scroll scroll-snap overflow-x-auto pb-4">
+                <div class="flex space-x-6" style="min-width: max-content;">
+                    <div class="w-64 flex-shrink-0 bg-white/50 rounded-2xl p-6 fun-hover">
+                        <div class="text-3xl lg:text-4xl font-bold text-blue-600 mb-2">47M+</div>
+                        <p class="text-gray-600 font-medium">Total Views Generated 👀</p>
+                    </div>
+                    <div class="w-64 flex-shrink-0 bg-white/50 rounded-2xl p-6 fun-hover">
+                        <div class="text-3xl lg:text-4xl font-bold text-green-600 mb-2">$280K+</div>
+                        <p class="text-gray-600 font-medium">Student Revenue Generated 💰</p>
+                    </div>
+                    <div class="w-64 flex-shrink-0 bg-white/50 rounded-2xl p-6 fun-hover">
+                        <div class="text-3xl lg:text-4xl font-bold text-purple-600 mb-2">15 min</div>
+                        <p class="text-gray-600 font-medium">Average Creation Time ⚡</p>
+                    </div>
+                    <div class="w-64 flex-shrink-0 bg-white/50 rounded-2xl p-6 fun-hover">
+                        <div class="text-3xl lg:text-4xl font-bold text-orange-600 mb-2">94%</div>
+                        <p class="text-gray-600 font-medium">Success Rate 🎯</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Learn Section - Horizontal Cards -->
+    <section class="py-12 bg-gradient-to-br from-yellow-50 via-orange-50 to-red-50 relative overflow-hidden">
+        <div class="absolute top-20 right-20 w-48 h-48 bg-gradient-to-r from-yellow-200 to-orange-200 blob opacity-30 animate-float"></div>
+        <div class="absolute bottom-20 left-20 w-40 h-40 bg-gradient-to-r from-red-200 to-pink-200 blob-2 opacity-30 animate-float" style="animation-delay: 1s;"></div>
+        
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">What You'll Learn 📚</h2>
+                <p class="text-lg text-gray-600 font-medium">Get access to the exact AI strategies and tools I use! 🎯</p>
+            </div>
+            
+            <!-- Horizontal Scrollable Cards -->
+            <div class="horizontal-scroll scroll-snap overflow-x-auto pb-4">
+                <div class="flex space-x-6" style="min-width: max-content;">
+                    <!-- Card 1 -->
+                    <div class="w-80 flex-shrink-0 bg-gradient-to-br from-blue-100 to-indigo-200 p-8 rounded-3xl text-center shadow-xl fun-hover sticker">
+                        <div class="w-20 h-20 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                            💻
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Build Money-Making Landing Pages</h3>
+                        <p class="text-gray-600 font-medium">Use AI to create high-converting pages that sell products and services automatically! 🚀</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="w-80 flex-shrink-0 bg-gradient-to-br from-purple-100 to-pink-200 p-8 rounded-3xl text-center shadow-xl fun-hover sticker">
+                        <div class="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                            🎬
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Create Viral AI Videos</h3>
+                        <p class="text-gray-600 font-medium">Generate engaging videos that get millions of views using simple AI tools! ✨</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="w-80 flex-shrink-0 bg-gradient-to-br from-green-100 to-emerald-200 p-8 rounded-3xl text-center shadow-xl fun-hover sticker">
+                        <div class="w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                            ⚙️
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Automate Your Side Hustle</h3>
+                        <p class="text-gray-600 font-medium">Discover tools that handle the work for you, so you can focus on scaling! 🔧</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="w-80 flex-shrink-0 bg-gradient-to-br from-yellow-100 to-orange-200 p-8 rounded-3xl text-center shadow-xl fun-hover sticker">
+                        <div class="w-20 h-20 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                            💰
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">Build Passive Income Streams</h3>
+                        <p class="text-gray-600 font-medium">Create income that works for you while you sleep - set it up once, earn forever! 💎</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Quiz Section -->
+    <section class="py-12 bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+        <div class="absolute top-20 right-20 w-40 h-40 bg-gradient-to-r from-cyan-200 to-blue-200 blob opacity-30 animate-float"></div>
+        <div class="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-r from-indigo-200 to-purple-200 blob-2 opacity-30 animate-float" style="animation-delay: 1s;"></div>
+        
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Quick Quiz! 🧠</h2>
+                <p class="text-lg text-gray-600 font-medium">What's your biggest challenge with AI content creation? 🤔</p>
+            </div>
+            
+            <div class="max-w-2xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <button class="quiz-option bg-white/60 rounded-2xl p-6 text-left hover:bg-white/80 transition-all duration-300">
+                        <div class="text-4xl mb-3">😰</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">I'm overwhelmed by all the AI tools</h3>
+                        <p class="text-gray-600 text-sm">Too many options, don't know where to start</p>
+                    </button>
+                    
+                    <button class="quiz-option bg-white/60 rounded-2xl p-6 text-left hover:bg-white/80 transition-all duration-300">
+                        <div class="text-4xl mb-3">💸</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">I don't have money to invest</h3>
+                        <p class="text-gray-600 text-sm">Worried about upfront costs</p>
+                    </button>
+                    
+                    <button class="quiz-option bg-white/60 rounded-2xl p-6 text-left hover:bg-white/80 transition-all duration-300">
+                        <div class="text-4xl mb-3">⏰</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">I don't have enough time</h3>
+                        <p class="text-gray-600 text-sm">Busy schedule, can't commit hours</p>
+                    </button>
+                    
+                    <button class="quiz-option bg-white/60 rounded-2xl p-6 text-left hover:bg-white/80 transition-all duration-300">
+                        <div class="text-4xl mb-3">🎯</div>
+                        <h3 class="text-lg font-bold text-gray-900 mb-2">I don't know what to create</h3>
+                        <p class="text-gray-600 text-sm">Stuck on content ideas</p>
+                    </button>
+                </div>
+                
+                <div class="text-center mt-8">
+                    <p class="text-gray-600 font-medium">Don't worry! This course solves ALL of these problems! 🎉</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-12 bg-gradient-to-r from-gray-900 to-gray-800 text-white relative overflow-hidden">
+        <div class="absolute top-10 left-10 text-6xl opacity-20 animate-float">💬</div>
+        <div class="absolute bottom-10 right-10 text-5xl opacity-20 animate-float" style="animation-delay: 1s;">⭐</div>
+        
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="mb-8">
+                    <div class="text-6xl mb-6 animate-bounce-slow">💯</div>
+                </div>
+                <blockquote class="text-2xl lg:text-3xl font-medium italic mb-8 leading-relaxed bg-white/10 backdrop-blur-sm rounded-3xl p-8 sticker">
+                    "I was skeptical at first, but after just 10 days of following Sophie's AI strategies, I made my first $450! 🎉 The step-by-step approach is genius - I went from zero knowledge to creating viral content that actually converts. This course is literally life-changing! 🚀"
+                </blockquote>
+                
+                <div class="flex items-center justify-center">
+                    <div class="w-16 h-16 bg-gradient-to-r from-pink-400 to-purple-400 rounded-full mr-4 flex items-center justify-center text-2xl">👤</div>
+                    <div class="text-left">
+                        <p class="font-bold text-lg">Alex Rodriguez</p>
+                        <p class="text-gray-300 font-medium">Course Student 🎓</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Works Section -->
+    <section class="py-12 bg-gradient-to-br from-cyan-50 via-blue-50 to-indigo-50 relative overflow-hidden">
+        <div class="absolute top-20 right-20 w-40 h-40 bg-gradient-to-r from-cyan-200 to-blue-200 blob opacity-30 animate-float"></div>
+        <div class="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-r from-indigo-200 to-purple-200 blob-2 opacity-30 animate-float" style="animation-delay: 1s;"></div>
+        
+        <div class="container mx-auto px-6 lg:px-8 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-8">Why It Works 🎯</h2>
+                <div class="bg-gradient-to-r from-white/80 to-blue-50/80 p-8 lg:p-12 rounded-3xl backdrop-blur-sm sticker">
+                    <p class="text-xl lg:text-2xl text-gray-700 mb-8 leading-relaxed font-medium">
+                        This isn't about hype or get-rich-quick schemes! 💪 You'll learn <strong>real skills</strong> using <strong>real AI tools</strong> that top creators are using right now to build sustainable income streams! 🚀
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                        <div class="bg-white/60 rounded-2xl p-6 fun-hover">
+                            <div class="text-4xl mb-2">🎯</div>
+                            <div class="text-3xl font-bold text-blue-600 mb-2">100%</div>
+                            <p class="text-gray-600 font-medium">Beginner Friendly</p>
+                        </div>
+                        <div class="bg-white/60 rounded-2xl p-6 fun-hover">
+                            <div class="text-4xl mb-2">💸</div>
+                            <div class="text-3xl font-bold text-purple-600 mb-2">$4.99</div>
+                            <p class="text-gray-600 font-medium">One-Time Payment</p>
+                        </div>
+                        <div class="bg-white/60 rounded-2xl p-6 fun-hover">
+                            <div class="text-4xl mb-2">⏰</div>
+                            <div class="text-3xl font-bold text-green-600 mb-2">24/7</div>
+                            <p class="text-gray-600 font-medium">Lifetime Access</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meme-Style Final CTA -->
+    <section class="py-12 bg-gradient-to-br from-pink-400 via-purple-500 to-blue-600 text-white relative overflow-hidden">
+        <div class="absolute top-10 left-10 text-6xl opacity-20 animate-float">🎉</div>
+        <div class="absolute bottom-10 right-10 text-5xl opacity-20 animate-float" style="animation-delay: 1s;">🚀</div>
+        <div class="absolute top-1/2 left-1/4 text-4xl opacity-20 animate-float" style="animation-delay: 2s;">✨</div>
+        
+        <div class="container mx-auto px-6 lg:px-8 text-center relative z-10">
+            <div class="mb-8">
+                <div class="text-8xl mb-4 animate-bounce-slow">🤯</div>
+                <h2 class="text-4xl lg:text-5xl font-bold mb-4">WAIT... WHAT?! 🤯</h2>
+                <p class="text-xl lg:text-2xl mb-6 text-white/90 font-medium">
+                    You're still reading this?! 😱<br>
+                    <span class="text-yellow-300 font-bold">STOP SCROLLING AND START EARNING! 💰</span>
+                </p>
+            </div>
+            
+            <div class="mb-8">
+                <div class="inline-block bg-white/20 backdrop-blur-sm rounded-3xl p-8 mb-6 sticker">
+                    <p class="text-lg mb-2 font-bold">🎁 LIMITED TIME OFFER 🎁</p>
+                    <div class="flex items-center justify-center space-x-4">
+                        <span class="text-3xl font-bold line-through text-white/70">$99</span>
+                        <span class="text-6xl font-bold text-yellow-300">$4.99</span>
+                    </div>
+                    <p class="text-sm text-white/80 mt-2 font-medium">Save $94 Today Only! 💰</p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <a href="https://learn.xavvi.com/?code=4TIR8BM4" class="bg-gradient-to-r from-yellow-400 to-orange-400 hover:from-yellow-500 hover:to-orange-500 text-gray-900 font-bold py-6 px-8 rounded-full text-xl transition-all duration-300 transform hover:scale-110 shadow-2xl fun-hover sticker">
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">🚀</div>
+                        <div>YES! I Want to Earn $300/Day!</div>
+                    </div>
+                </a>
+                
+                <a href="https://learn.xavvi.com/?code=4TIR8BM4" class="bg-gradient-to-r from-green-400 to-blue-400 hover:from-green-500 hover:to-blue-500 text-white font-bold py-6 px-8 rounded-full text-xl transition-all duration-300 transform hover:scale-110 shadow-2xl fun-hover sticker">
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">💎</div>
+                        <div>Show Me the Money! 💰</div>
+                    </div>
+                </a>
+            </div>
+            
+            <p class="text-sm text-white/80 mt-6 font-medium">✅ Instant Access ✅ 7-Day Money Back Guarantee ✅ Beginner Friendly</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500"></div>
+        <div class="container mx-auto px-6 lg:px-8 text-center">
+            <p class="text-sm font-medium">
+                © 2024 AI Income Secrets. All rights reserved. | 
+                Results may vary. Not financial advice. | 
+                Individual results depend on effort and application of techniques taught. 📝
+            </p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA Banner -->
+    <div class="sticky-banner lg:hidden" id="stickyBanner">
+        <div class="bg-gradient-to-r from-pink-500 to-purple-600 text-white p-4 shadow-2xl">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="text-2xl mr-3">💰</div>
+                    <div>
+                        <p class="font-bold text-sm">Start Earning Today!</p>
+                        <p class="text-xs opacity-90">Only $4.99 - Limited Time</p>
+                    </div>
+                </div>
+                <a href="https://learn.xavvi.com/?code=4TIR8BM4" class="bg-yellow-400 text-gray-900 font-bold py-2 px-4 rounded-full text-sm">
+                    Get Started! 🚀
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Show sticky banner after scrolling
+        window.addEventListener('scroll', function() {
+            const banner = document.getElementById('stickyBanner');
+            if (window.scrollY > 500) {
+                banner.classList.add('show');
+            } else {
+                banner.classList.remove('show');
+            }
+        });
+
+        // Quiz interaction
+        document.querySelectorAll('.quiz-option').forEach(option => {
+            option.addEventListener('click', function() {
+                // Remove previous selections
+                document.querySelectorAll('.quiz-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                // Add selection to clicked option
+                this.classList.add('selected');
+                
+                // Show result after a delay
+                setTimeout(() => {
+                    alert('🎉 Great choice! This course will help you overcome that challenge! 🚀');
+                }, 500);
+            });
+        });
+    </script>
+</body>
+</html> 
